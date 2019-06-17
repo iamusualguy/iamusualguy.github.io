@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>iamusualguy</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript">
+  function getJson() {
+        $.get("https://api.myjson.com/bins/2jpm0", function (data, textStatus, jqXHR) {
+        var json = JSON.stringify(data);
+        var obj = jQuery.parseJSON(json);
+
+        $("#textarea1").val(json);
+      });
+    }
+
+  function updateJson() {
+        $.ajax({
+            url: "https://api.myjson.com/bins/2jpm0",
+            type: "PUT",
+            data: $("#textarea1").val(),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data, textStatus, jqXHR) {
+                var json = JSON.stringify(data);
+                $("#textarea1").val(json);
+            }
+        });
+  }
+
+  </script>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">iamusualguy</a>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <p><a class="waves-effect waves-light btn" id="getJson" onclick="getJson();"><i class="material-icons left">cloud</i>get json</a></p>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">json</label>
+            </div>
+          </div>
+            <p><a class="waves-effect waves-light btn" id="updateJson" onclick="updateJson();"><i class="material-icons right">send</i>update json</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer teal">
+
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
