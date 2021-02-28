@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Harmond-ItalicCondensed";
+  src: url('fonts/HarmondItalicCondensed/font.woff2') format('woff2'), url('webFonts/HarmondItalicCondensed/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Harmond-Condensed";
+  src: url('fonts/HarmondCondensed/font.woff2') format('woff2'), url('webFonts/HarmondCondensed/font.woff') format('woff');
+}
+
+.works .text {
+  width: min(90vw, 100vh);
+  font-size: min(9vh, 9vw);
+  position: relative;
+  transform: translateZ(250px) scale(0.7);
+  line-height: 1.4;
+  font-family: "Harmond-ItalicCondensed";
+  transform-style: preserve-3d;
+}
+
+.works .text .work {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.works .text .work h1 {
+  /* text-decoration: underline; */
+  font-size: 1em;
+  font-weight: 100;
+  border-bottom: 0.05em solid;
+  z-index: 1;
+  position: relative;
+}
+
+.works .text .work .img {
+  height: 80vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  position: relative;
+  top: -1em;
+  transform: translateZ(-100px) scale(1.1);
+}
+
+.workFollower {
+  position: fixed;
+  width: 50vh;
+  height: 0;
+  pointer-events: none;
+  z-index: 20000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* transform:translate(-50%, -52%); */
+  transition: height 0.3s;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateX(-25%) translateY(-50%);
+  }
+
+  50% {
+    transform: translateX(-25%) translateY(-52%);
+  }
+}
+
+
+.contact .text {
+    width: min(90vw, 100vh);
+    font-size: min(9vh, 9vw);
+    position: relative;
+    transform: translateZ(250px) scale(0.7);
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 900;
+  }
+
+
+.contact .text .link {
+    text-align: center;
+}

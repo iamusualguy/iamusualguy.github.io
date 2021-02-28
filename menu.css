@@ -1,0 +1,95 @@
+.menu {
+  background: #444;
+  width: calc(100% - 5em);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 1;
+  transition: right 0.3s 0.2s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'syne', serif;
+}
+
+.menuItem {
+  font-weight: 900;
+  font-size: min(10vh, 10vw);
+  position: relative;
+  height: 1.5em;
+  color: #2e2e2e00;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fcccff;
+}
+
+.menuItem a { 
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.menuItem:before {
+  top: 0;
+  left: 0;
+  width: 0;
+  color: #fcccff;
+  overflow: hidden;
+  position: absolute;
+  content: attr(data-text);
+  transition: all 0.7s;
+}
+.menuItem:hover:before {
+  width: 100%;
+}
+
+.menu.opened {
+  right: 0;
+}
+
+.menuButton {
+  z-index: 2;
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.9;
+  /* padding: 5px; */
+}
+
+.menuButton:hover {
+  opacity: 1;
+}
+
+.menuButton:before,
+.menuButton:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 4px;
+  background-color: #2e2e2e;
+  transition: transform 0.5s, background-color 0.5s;
+}
+
+.menuButton.close:before,
+.menuButton.close:after {
+  background-color: #fcccff;
+}
+
+.menuButton:before {
+  transform: rotate(90deg) translateX(5px);
+}
+
+.menuButton:after {
+  transform: rotate(-90deg) translateX(5px);
+}
+
+.menuButton.close:before {
+  transform: rotate(45deg);
+}
+
+.menuButton.close:after {
+  transform: rotate(-45deg);
+}

@@ -1,78 +1,145 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>anton stepanov</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
-<link rel="stylesheet" href="./style.css">
+  <!-- Primary Meta Tags -->
+  <title>Anton Stepanov</title>
+  <meta name="title" content="Anton Stepanov">
+  <meta name="description"
+    content="I'm a usual guy who likes making weird things with web technologies or better known as a Front-end Developer.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://anton-stepanov.ru/">
+  <meta property="og:title" content="Anton Stepanov">
+  <meta property="og:description"
+    content="I'm a usual guy who likes making weird things with web technologies or better known as a Front-end Developer.">
+  <meta property="og:image" content="./meta.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="http://anton-stepanov.ru/">
+  <meta property="twitter:title" content="Anton Stepanov">
+  <meta property="twitter:description"
+    content="I'm a usual guy who likes making weird things with web technologies or better known as a Front-end Developer.">
+  <meta property="twitter:image" content="./meta.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./font.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./loader.css">
+  <link rel="stylesheet" href="./menu.css">
+  <link rel="stylesheet" href="./works.css">
 </head>
+
 <body>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-  (function (d, w, c) {
-      (w[c] = w[c] || []).push(function() {
-          try {
-              w.yaCounter47572639 = new Ya.Metrika({
-                  id:47572639,
-                  clickmap:true,
-                  trackLinks:true,
-                  accurateTrackBounce:true,
-                  webvisor:true,
-                  trackHash:true
-              });
-          } catch(e) { }
-      });
+  <div id="parralax">
+    <div id="top" class="top" onclick="getAccel()">
+      <h1> FRONT-END </h1>
+      <h1 style="z-index: 1;"> DEVELOPER </h1>
+      <div id="container">
+        <div class="lds-spinner" id="loader">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="scroll" id="scroll">scroll</div>
+    </div>
+    <div id="about" class="about">
+      <div class="ts" id="roundyabout"></div>
+      <div class="text">
+        <img id="wave" class="wave" src="wave.png" />
+        <b>I'm a usual guy</b> who likes to create weird things with web technologies or better known as a 
+        <b style="word-break: keep-all;">
+          <a class="link" href="https://www.linkedin.com/in/anton--stepanov/"
+            target="_blank">Frontend&nbsp;Developer</a></b>. 
+        <br />
 
-      var n = d.getElementsByTagName("script")[0],
-          s = d.createElement("script"),
-          f = function () { n.parentNode.insertBefore(s, n); };
-      s.type = "text/javascript";
-      s.async = true;
-      s.src = "https://mc.yandex.ru/metrika/watch.js";
+        <br />
+        Currently located in <a class="link" href="https://goo.gl/maps/uBrz6DHZ2fTHgTai7" style="word-break: keep-all;"
+          target="_blank">Rīga,&nbsp;Latvia</a>.
+      </div>
+    </div>
+    <div id="works" class="works">
+      <div class="ts" id="roundyworks"></div>
+      <div class="text">
+        <div class="work" data-url="works/chVIP.png">
+          <a target="_blank" href="https://vip-clubhouse.netlify.app/">
+            <h1 class="link">clubhouse avatar generator</h1>
 
-      if (w.opera == "[object Opera]") {
-          d.addEventListener("DOMContentLoaded", f, false);
-      } else { f(); }
-  })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/47572639" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<div class="cont">
-  <div class="name2">
-    <p> anton </p>
+            <div class="img" style="background-image: url('./works/chVIP.png');"></div>
+          </a>
+        </div>
+        <div class="work" data-url="works/spyr.png">
+          <a target="_blank" href="https://spyrogram.netlify.app/?param={0:1},{48:57.6},{229:-12.4},{185:20.6}">
+            <h1 class="link">spyrogram</h1>
+
+            <div class="img" style="background-image: url('./works/spyr.png');"></div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div id="contact" class="contact">
+      <div class="ts" id="roundycontact"></div>
+      <div class="text">
+        <a class="link" href="mailto:iamusualguy@gmail.com " target="_blank"> e-mail </a>
+        <a class="link" href="https://www.instagram.com/iamusualguy/" target="_blank"> instagram </a>
+        <a class="link" href="https://www.linkedin.com/in/anton--stepanov/" target="_blank"> linkedin </a>
+        <a class="link" href="https://www.facebook.com/iamusualguy" target="_blank"> facebook </a>
+        <a class="link" href="https://github.com/iamusualguy" target="_blank"> github </a>
+      </div>
+    </div>
+
   </div>
-  <div class="surname2">
-    <p> stepanov </p>
+  <div id="menu" class="menu">
+    <a href="#top" onclick="menuClick()">
+      <div class="menuItem" data-text="Home">
+        Home
+      </div>
+    </a>
+    <a href="#about" onclick="menuClick()">
+      <div class="menuItem" data-text="About">
+        About
+      </div>
+    </a>
+    <a href="#works" onclick="menuClick()">
+      <div class="menuItem" data-text="Works">
+        Works
+      </div>
+    </a>
+    <a href="#contact" onclick="menuClick()">
+      <div class="menuItem" data-text="Contact">
+        Contact
+      </div>
+    </a>
   </div>
-  <div class="circle" id="circle">
-    <div class="name" id="name">
-      <p> anton </p>
-    </div>
-    <div class="surname" id="surname">
-      <p> stepanov </p>
-    </div>
+  <div id="menuButton" class="menuButton link" onclick="menuClick()"></div>
 
-    <div class="info" id="info">
-      <p>
-        hi, i am pretty cool <br/>
-        <i>7+ years experienced </i><br/> web-developer.
-      </p>
-    </div>
-
-    <div class="links" id="links">
-      <a href='mailto:mail@anton-stepanov.ru'><i>mail me </i></a>
-      </br>
-      </br>
-      <a target="_blank" href="https://www.facebook.com/iamusualguy"> facebook </a> </br>
-      <a target="_blank" href="https://www.instagram.com/iamusualguy"> instagram </a> </br>
-      <a target="_blank"  href="https://www.linkedin.com/in/anton--stepanov/"> linked in </a> </br>
-    </div>
-  </div>
-<div class="scroll" id="scroll"> scroll down </div>
-
-</div>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
+  <div id="cursor"></div>
+  <div id="workFollower" class="workFollower"></div>
+  <div class="whiteList"> </div>
+  <!-- partial -->
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r103/three.min.js"></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r103/js/loaders/ObjectLoader.js"></script>
+  <script
+    src="https://threejsfundamentals.org/threejs/resources/threejs/r103/js/postprocessing/EffectComposer.js"></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r103/js/postprocessing/RenderPass.js"></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r103/js/postprocessing/ShaderPass.js"></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r103/js/shaders/PixelShader.js"></script>
+  <script src="./script.js"></script>
+  <script src="./menu.js"></script>
+  <script src="./roundy.js"></script>
 </body>
+
 </html>
