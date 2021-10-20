@@ -32,37 +32,38 @@ font-weight: 900;
 }
 
 const roundyworks = document.getElementById("roundyworks");
+if (roundyworks) {
+    const textworks = "WORKS•WORKS•WORKS•".split("");
 
-const textworks = "WORKS•WORKS•WORKS•".split("");
+    {
+        const step2 = 100 / textworks.length;
+        const L = textworks.length
+        textworks.map((c, idx) => {
+            const r = 40;
+            var s = 2 * Math.PI / L;
+            var f = s * (idx);
+            const x = r * Math.sin(f);
+            const y = -r * Math.cos(f);
 
-{
-    const step2 = 100 / textworks.length;
-    const L = textworks.length
-    textworks.map((c, idx) => {
-        const r = 40;
-        var s = 2 * Math.PI / L;
-        var f = s * (idx);
-        const x = r * Math.sin(f);
-        const y = -r * Math.cos(f);
-
-        const n = document.createElement("div");
-        n.className = "letter";
-        n.style = `
+            const n = document.createElement("div");
+            n.className = "letter";
+            n.style = `
         transform:
         translate(${x}%,${y}%)
         scale(${0.015 * step2},${0.015 * step2});
         `;
-        const nn = document.createElement("div");
-        nn.style = `
+            const nn = document.createElement("div");
+            nn.style = `
     transform: 
       rotateZ(${idx * 360 / L}deg);
     font-weight: 600;
         `;
-        nn.innerText = textworks[idx];
-        n.appendChild(nn);
+            nn.innerText = textworks[idx];
+            n.appendChild(nn);
 
-        roundyworks.appendChild(n);
-    });
+            roundyworks.appendChild(n);
+        });
+    }
 }
 
 
