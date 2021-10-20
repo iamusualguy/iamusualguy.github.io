@@ -313,8 +313,8 @@ document.getElementById('parralax').addEventListener('scroll', function (e) {
   const roundyabout = document.getElementById("roundyabout");
   roundyabout.style.transform = `rotate(${this.scrollTop * 0.07}deg)`;
 
-  const roundyworks = document.getElementById("roundyworks");
-  roundyworks.style.transform = `rotate(${this.scrollTop * 0.07}deg)`;
+  // const roundyworks = document.getElementById("roundyworks");
+  // roundyworks.style.transform = `rotate(${this.scrollTop * 0.07}deg)`;
 
   const roundycontact = document.getElementById("roundycontact");
   roundycontact.style.transform = `rotate(${this.scrollTop * 0.07}deg)`;
