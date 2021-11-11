@@ -1,0 +1,14 @@
+html {
+    cursor: none !important;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fcccff;
+    color: #444;
+    font-family: 'sans-serif';
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
