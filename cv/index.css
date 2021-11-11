@@ -1,18 +1,34 @@
 html {
-    cursor: none !important;
     height: 100%;
-    scroll-behavior: smooth;
-}
-
-body {
+  }
+  
+  body {
     background-color: #fcccff;
     color: #444;
-    font-family: 'sans-serif';
+    font-family: "sans-serif";
     margin: 0;
     padding: 0;
     height: 100%;
-}
-
-iframe {
-    height: 80vh;
-}
+  }
+  a {
+    bottom: 0;
+    height: 5vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 5vh;
+    color: #444;
+  }
+  iframe {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5vh;
+    height: 90vh;
+    width: 90%;
+    max-width: 800px;
+    align: center;
+    border-style: none;
+    background: #fff;
+  }
+  
