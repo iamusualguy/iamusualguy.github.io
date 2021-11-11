@@ -25,9 +25,8 @@ html {
     transform: translateX(-50%);
     top: 5vh;
     height: 90vh;
-    width: 90%;
+    width: calc(100vw + 160px);
     max-width: 800px;
-    align: center;
     border-style: none;
     background: #fff;
   }
