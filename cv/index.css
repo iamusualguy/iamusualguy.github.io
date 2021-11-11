@@ -25,6 +25,7 @@ a {
   height: 5vh;
   line-height: 5vh;
   color: #444;
+  font-size: max(2vh, 2vw);
 }
 iframe {
   height: 90vh;
